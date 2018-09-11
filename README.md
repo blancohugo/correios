@@ -1,5 +1,10 @@
 # Correios zip code query with PHP
 
+[![Latest version][icon-packagist]][link-packagist]
+[![CircleCI][icon-circleci]][link-circleci]
+[![Code Coverage][icon-codecov]][link-codecov]
+[![Download count][icon-downloads]][link-packagist]
+
 A service for fetching data from an address from a provided zip code.
 
 ## Installation
@@ -46,3 +51,12 @@ try {
 ## Contributing
 
 See how to [CONTRIBUTE](https://github.com/blancohugo/correios/blob/master/CONTRIBUTING.md) to this project.
+
+[icon-packagist]: https://img.shields.io/packagist/v/blancohugo/correios.svg?style=flat-square
+[icon-circleci]: https://img.shields.io/circleci/project/github/blancohugo/correios.svg?style=flat-square
+[icon-codecov]: https://img.shields.io/codecov/c/github/blancohugo/correios.svg?style=flat-square
+[icon-downloads]: https://img.shields.io/packagist/dt/blancohugo/correios.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/blancohugo/correios
+[link-circleci]: https://circleci.com/gh/blancohugo/correios
+[link-codecov]: https://codecov.io/gh/blancohugo/correios
