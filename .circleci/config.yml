@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  php71:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+    working_directory: ~/php71
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: Composer Install
+          command: composer install --no-progress --no-interaction
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run:
+          name: Composer Test
+          command: composer test
+      - run:
+          name: Composer Check (Coding Standard)
+          command: composer check
+      - run:
+          name: Upload Code Coverage
+          command: bash <(curl -s https://codecov.io/bash)
+      - store_artifacts:
+          path: build/coverage
+          destination: coverage
+  php72:
+    docker:
+      - image: circleci/php:7.2-node-browsers
+    working_directory: ~/php72
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: Composer Install
+          command: composer install --no-progress --no-interaction
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run:
+          name: Composer Test
+          command: composer test -- --coverage-text
+      - run:
+          name: Composer Check (Coding Standard)
+          command: composer check
+      - store_artifacts:
+          path: build/coverage
+          destination: coverage
