@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:consultaCEPResponse xmlns:ns2="http://cliente.bean.master.sigep.bsb.correios.com.br/">
+         <return>
+            <bairro>Bela Vista</bairro>
+            <cep>01311929</cep>
+            <cidade>São Paulo</cidade>
+            <complemento />
+            <complemento2 />
+            <end>Avenida Paulista, 1745</end>
+            <id>0</id>
+            <uf>SP</uf>
+         </return>
+      </ns2:consultaCEPResponse>
+   </soap:Body>
+</soap:Envelope>
