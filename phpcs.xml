@@ -4,5 +4,5 @@
     <rule ref="PSR2"/>
 
     <file>src</file>
-    <file>test</file>
+    <file>tests</file>
 </ruleset>
