@@ -20,7 +20,7 @@ Follow these steps to contribute to this repository:
 6. Provide a test for you code
 7. Submit a pull request
 
-# Coding Stardard
+# Coding Standard
 
 It is important that you follow the [PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md).
 
